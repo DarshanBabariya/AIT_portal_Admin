@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    color: #000;
+    background-color: #fff;
+    font-size: 20px;
+    font-family: 'Oxygen', sans-serif;
+
+}
+
+.heading_style {
+    font-family: 'Vollkorn', serif;
+    font-size: 1.8em;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-top: 50px;
+    margin-bottom: 50px;
+    color: #CC0000;
+}
+/*brand-name*/
+.ait-brand {
+    background-color: #272833;
+}
+#brand-logo img {
+    width: 120%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#brand-name a h1{
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px #CC0000;
+    color: #FFF;
+    letter-spacing: 1px;
+    padding-top: 30px;
+    text-align: center;
+}
+#brand-name a {
+    text-decoration: none;
+}
+#brand-name h3 {
+    font-size: 18px;
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+    font-weight: bold;
+    color: #f1f1f1;
+    text-shadow: 1px 1px 1px #000;
+}
+
+
+/* sidebar nevigation */
+/*menubar*/
+.navigation {
+    position: absolute;
+    width: 70px;
+    height: 570px;
+    background-color: #CC0000;
+    transition: 0.6s;
+    overflow-x: hidden;
+}
+
+.navigation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #FFF;
+    padding: 0;    
+    padding-top: 20px;
+}
+.navigation ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-bottom: 1px solid #fff;
+}
+.navigation ul li a:hover {
+    background-color: #FFF;
+    color: #CC0000;
+}
+.navigation ul li a {
+    position: relative;
+    display: none;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #FFF;
+}
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    padding-left: 20px;
+}
+.navigation ul li a .icon .fa{
+    font-size: 22px;
+}
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+    font-size: 18px;
+}
+
+/* footer   */
+.copyright {
+    font-size: 18px;
+    background-color: #272833;
+    color: #FFF;
+    padding: 20px 10px;
+}
+
+
+
+/*****      EXTRA LARGE DEVICE ONLY         *****/
+@media (min-width: 1200px) {
+    
+}
+
+/*****      LARGE DEVICE ONLY           *****/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    /*brand-name*/
+    #brand-logo img {
+        width: 60%;
+    }
+    #brand-name a h1{
+        font-size: 1.5em;
+    }
+    #brand-name h3 {
+        font-size: 15px;
+    }
+}
+
+/*****      MEDIUM DEVICE ONLY          *****/
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /*brand-name*/
+    #brand-logo img {
+        width: 80%;
+    }
+    #brand-name a h1{
+        font-size: 1.15em;
+        letter-spacing: .5px;
+    }
+    #brand-name h3 {
+        font-size: 12px;
+    }
+}
+
+/*****      SMALL DEVICE ONLY       *****/
+@media (min-width: 576px) and (max-width: 767.98px) {
+    /*brand-name*/
+    #brand-logo img {
+        width: 90%;
+    }
+    #brand-name a h1{
+        font-size: .85em;
+        letter-spacing: .5px;
+        padding-top: 15px;
+    }
+    #brand-name h3 {
+        font-size: 10px;
+    }
+}
+
+/*****      EXTRA SUPER SMALL DEVICE ONLY       *****/
+@media (max-width: 575.98px) {
+    /*brand-name*/
+    #brand-logo img {
+        width: 90%;
+    }
+    #brand-logo {
+        padding: 10px;
+        
+    }
+    #brand-name a h1{
+        font-size: .7em;
+        letter-spacing: 1px;
+        padding-top: 20px;
+    }
+    #brand-name h3 {
+        font-size: 6px;
+    }
+    #brand-name {
+        padding: 2px;
+    }
+
+}

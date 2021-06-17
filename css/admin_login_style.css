@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    color: #000;
+    background-color: #fff;
+    font-size: 18px;
+    font-family: 'Oxygen', sans-serif;
+
+}
+
+.heading_style {
+    font-family: 'Vollkorn', serif;
+    font-size: 1.8em;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-top: 50px;
+    margin-bottom: 50px;
+    color: #CC0000;
+}
+/*brand-name*/
+.ait-brand {
+    background-color: #272833;
+}
+#brand-logo img {
+    width: 120%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#brand-name a h1{
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px #FF0000;
+    color: #FFF;
+    letter-spacing: 1px;
+    padding-top: 30px;
+    text-align: center;
+}
+#brand-name a {
+    text-decoration: none;
+}
+#brand-name h3 {
+    font-size: 18px;
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+    font-weight: bold;
+    color: #FFF;
+    text-shadow: 1px 1px 1px #000;
+}
+
+/* admin-login */
+#admin-login {
+    margin-bottom: 250px;
+}
+#admin-login h5{
+    color: #272833;
+    font-weight: bold;
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.copyright {
+    font-size: 18px;
+    background-color: #272833;
+    color: #FFF;
+    padding: 20px 10px;
+}
+#uname, #pwd {
+    box-shadow: none;
+}
+#admin_submit {
+    background-color: #CC0000 !important;
+    color: #FFF;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+.alert {
+    padding: 5px 0px !important;
+    transition: .5s;
+}
+
+/*****      EXTRA LARGE DEVICE ONLY         *****/
+@media (min-width: 1200px) {
+    
+}
+
+/*****      LARGE DEVICE ONLY           *****/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    /*brand-name*/
+    #brand-logo img {
+        width: 60%;
+    }
+    #brand-name a h1{
+        font-size: 1.5em;
+    }
+    #brand-name h3 {
+        font-size: 15px;
+    }
+}
+
+/*****      MEDIUM DEVICE ONLY          *****/
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /*brand-name*/
+    #brand-logo img {
+        width: 80%;
+    }
+    #brand-name a h1{
+        font-size: 1.15em;
+        letter-spacing: .5px;
+    }
+    #brand-name h3 {
+        font-size: 12px;
+    }
+}
+
+/*****      SMALL DEVICE ONLY       *****/
+@media (min-width: 576px) and (max-width: 767.98px) {
+    /*brand-name*/
+    #brand-logo img {
+        width: 90%;
+    }
+    #brand-name a h1{
+        font-size: .85em;
+        letter-spacing: .5px;
+        padding-top: 15px;
+    }
+    #brand-name h3 {
+        font-size: 10px;
+    }
+}
+
+/*****      EXTRA SUPER SMALL DEVICE ONLY       *****/
+@media (max-width: 575.98px) {
+    /*brand-name*/
+    #brand-logo img {
+        width: 90%;
+    }
+    #brand-logo {
+        padding: 10px;
+        
+    }
+    #brand-name a h1{
+        font-size: .7em;
+        letter-spacing: 1px;
+        padding-top: 20px;
+    }
+    #brand-name h3 {
+        font-size: 6px;
+    }
+    #brand-name {
+        padding: 2px;
+    }
+
+}
