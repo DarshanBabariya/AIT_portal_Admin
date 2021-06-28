@@ -1,0 +1,412 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    color: #000;
+    background-color: #fff;
+    font-size: 18px;
+    font-family: 'Oxygen', sans-serif;
+
+}
+
+.heading_style {
+    font-family: 'Vollkorn', serif;
+    font-size: 1.8em;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-top: 50px;
+    margin-bottom: 50px;
+    color: #CC0000;
+}
+/*brand-name*/
+.ait-brand {
+    background-color: #272833;
+}
+#brand-logo img {
+    width: 120%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#brand-name a h1{
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px #FF0000;
+    color: #FFF;
+    letter-spacing: 1px;
+    padding-top: 30px;
+    text-align: center;
+}
+#brand-name a {
+    text-decoration: none;
+}
+#brand-name h3 {
+    font-size: 18px;
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+    font-weight: bold;
+    color: #FFF;
+    text-shadow: 1px 1px 1px #000;
+}
+
+/* admin-login */
+#admin-login {
+    margin-bottom: 250px;
+}
+#admin-login h5{
+    color: #272833;
+    font-weight: bold;
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.copyright {
+    font-size: 18px;
+    background-color: #272833;
+    color: #FFF;
+    padding: 20px 10px;
+}
+#uname, #pwd {
+    box-shadow: none;
+}
+#admin_submit {
+    background-color: #CC0000 !important;
+    color: #FFF;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+.alert {
+    padding: 5px 0px !important;
+    transition: .5s;
+}
+
+/* sidebar nevigation */
+/*menubar*/
+.navigation {
+    position: absolute;
+    width: 70px;
+    height: 570px;
+    background-color: #CC0000;
+    transition: 0.6s;
+    overflow-x: hidden;
+    z-index: 1;
+}
+
+.navigation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #FFF;
+    padding: 0;    
+    padding-top: 20px;
+}
+.navigation ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-bottom: 1px solid #fff;
+}
+.navigation ul li a:hover {
+    background-color: #FFF;
+    color: #CC0000;
+}
+.navigation ul li a {
+    position: relative;
+    display: none;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #FFF;
+}
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    padding-left: 20px;
+}
+.navigation ul li a .icon .fa{
+    font-size: 22px;
+}
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+    font-size: 18px;
+}
+.dropdown-menu {
+    margin-left: 200px !important;
+}
+  
+.dropdown-menu .dropdown-item{
+    color: #CC0000;
+    text-align: center;
+    border-bottom: 1px solid #CC0000;
+}
+.dropdown-menu .dropdown-item:hover{
+    background-color: #CC0000;
+    color: #FFF;
+}
+
+
+.container-fluid {
+    padding-left: 70px;
+    padding-top: 20px;
+}
+.heading-tile {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 22px;
+}
+#add_fc_btn {
+    background-color: #CC0000;
+    color: #FFF;
+    letter-spacing: 1px;
+    box-shadow: none;
+}
+/* faculty */
+.faculty_content {
+    background-color: #FFF;  
+    margin: 10px;
+}
+
+.fac-img img {
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.fac-img h4 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #CC0000;
+    border: 2px solid #dee2e6;
+    padding: 5px;
+}
+.fac-detail ul {
+    text-align: left;
+    margin: 30px;
+    list-style: none;
+}
+.fac-detail ul li span{
+    font-weight: bold;
+}
+.fac-detail ul li {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #272833;
+}
+#fc_add_form label{
+    margin-top: 10px;
+}
+#fc_add_form input, #fc_add_form textarea{
+    box-shadow: none;
+}
+#add_error {
+    display: none;
+}
+#edit_error {
+    display: none;
+}
+/* faculty-search */
+#search_container {
+    padding-top: 10px;
+}
+#search-bar {
+    margin: 15px 0px;
+}
+#search-bar div{
+    padding: 0px !important;
+}
+#search_fac ,#search_fac_select {
+    margin: 0px 10px;
+    box-shadow: none;
+}
+
+/* semster-subject */
+#sub_add_form label{
+    margin-top: 10px;
+}
+#sub_add_form input, #sub_add_form textarea{
+    box-shadow: none;
+}
+.card-header .fa-arrow-left {
+    font-size: 25px;
+    color: #CC0000;
+    background-color: #FFF;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #00000020;
+}
+.card-header .fa-arrow-left:hover {
+    color: #272833;
+}
+/* gallary_nav */
+.nav-tabs{
+    margin-top: 20px;
+}
+.gal-nav {
+    margin: 0 50px;
+}
+.gal-nav a {
+    color: #CC0000;
+    font-weight: bold;
+    font-size: 22px;
+}
+.gal-nav a:hover{
+    color: #272833;
+    background-color: #f5f5f5c4;
+    border: 2px solid #dee2e6;
+    transition: .8s;
+}
+.active {
+    background-color: #f5f5f5c4 !important;
+    border: 1px solid #dee2e6 !important;
+
+}
+
+/* semester content */
+.tab-pane {
+    background-color: #f5f5f5c4;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    margin-bottom: 50px;
+}
+.sub_content{
+    border: 3px solid #000;
+    overflow: auto;
+    width: 90%;
+    padding: 2px;
+}
+/* Subjects */
+.sub_content::-webkit-scrollbar {
+    width: 15px;
+}
+.sub_content::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 10px;
+}
+.sub_content::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to right,#CC0000, #FFD5CD, #CC0000);
+    border: 2px solid #CC0000;
+}
+.sub_table {
+    width: 100%; 
+}
+.sub_table tr th{
+    border: 2px solid #000;
+    text-align: center;
+    padding: 5px 30px;
+    background-color: #272833;
+    color: #FFF;
+    font-size: 21px;
+}
+.sub_table tr td {
+    border: 2px solid #000;
+    text-align: center;
+    padding: 10px 30px;
+    background-color: #FFF;
+    color: #000;
+    font-size: 20px;
+}
+.sub_table tr td a{
+    color: #000;
+}
+.sub_table tr td a:hover{
+    text-decoration: none;
+    color: #CC0000;
+    font-weight: bold;
+}
+#sub_add_form label{
+    margin-top: 10px;
+}
+#sub_add_form input, #sub_add_form select{
+    box-shadow: none;
+}
+
+/*****      EXTRA LARGE DEVICE ONLY         *****/
+@media (min-width: 1200px) {
+    
+}
+
+/*****      LARGE DEVICE ONLY           *****/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    /*brand-name*/
+    #brand-logo img {
+        width: 60%;
+    }
+    #brand-name a h1{
+        font-size: 1.5em;
+    }
+    #brand-name h3 {
+        font-size: 15px;
+    }
+}
+
+/*****      MEDIUM DEVICE ONLY          *****/
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /*brand-name*/
+    #brand-logo img {
+        width: 80%;
+    }
+    #brand-name a h1{
+        font-size: 1.15em;
+        letter-spacing: .5px;
+    }
+    #brand-name h3 {
+        font-size: 12px;
+    }
+}
+
+/*****      SMALL DEVICE ONLY       *****/
+@media (min-width: 576px) and (max-width: 767.98px) {
+    /*brand-name*/
+    #brand-logo img {
+        width: 90%;
+    }
+    #brand-name a h1{
+        font-size: .85em;
+        letter-spacing: .5px;
+        padding-top: 15px;
+    }
+    #brand-name h3 {
+        font-size: 10px;
+    }
+}
+
+/*****      EXTRA SUPER SMALL DEVICE ONLY       *****/
+@media (max-width: 575.98px) {
+    /*brand-name*/
+    #brand-logo img {
+        width: 90%;
+    }
+    #brand-logo {
+        padding: 10px;
+        
+    }
+    #brand-name a h1{
+        font-size: .7em;
+        letter-spacing: 1px;
+        padding-top: 20px;
+    }
+    #brand-name h3 {
+        font-size: 6px;
+    }
+    #brand-name {
+        padding: 2px;
+    }
+
+}

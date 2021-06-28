@@ -15,7 +15,7 @@ if (isset($_SESSION["uname"])) {
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/style1.css">
+    <link rel="stylesheet" href="../css/style.css">
 
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -33,80 +33,6 @@ if (isset($_SESSION["uname"])) {
         .navigation {
             z-index: 1;
         }
-        .container-fluid {
-            padding-left: 70px;
-            padding-top: 20px;
-        }
-        .heading-tile {
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 600;
-            font-size: 22px;
-        }
-        #add_fc_btn {
-            background-color: #CC0000;
-            color: #FFF;
-            letter-spacing: 1px;
-            box-shadow: none;
-        }
-        /* faculty */
-        .faculty_content {
-            background-color: #FFF;  
-            margin: 10px;
-        }
-
-        .fac-img img {
-            width: 200px;
-            height: 200px;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-        .fac-img h4 {
-            text-align: center;
-            margin-bottom: 10px;
-            font-size: 22px;
-            font-weight: bold;
-            color: #CC0000;
-            border: 2px solid #dee2e6;
-            padding: 5px;
-        }
-        .fac-detail ul {
-            text-align: left;
-            margin: 30px;
-            list-style: none;
-        }
-        .fac-detail ul li span{
-            font-weight: bold;
-        }
-        .fac-detail ul li {
-            margin-bottom: 10px;
-            font-size: 20px;
-            color: #272833;
-        }
-        #fc_add_form label{
-            margin-top: 10px;
-        }
-        #fc_add_form input, #fc_add_form textarea{
-            box-shadow: none;
-        }
-        #add_error {
-            display: none;
-        }
-        #search_container {
-            padding-top: 0px;
-        }
-        #search-bar {
-            margin: 15px 0px;
-        }
-        #search-bar div{
-            padding: 0px !important;
-        }
-        #search_fac ,#search_fac_select {
-            margin: 0px 10px;
-            box-shadow: none;
-        }
-       
-        
     </style>
     <title>AIT | CE & IT PORTAL-ADMIN | Faculty</title>
 </head>

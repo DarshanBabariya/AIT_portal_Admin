@@ -2,7 +2,9 @@
 session_start();
 require('../db_config/config.php');
 
-if (isset($_SESSION["uname"])) {
+if (isset($_SESSION["uname"]) && $_REQUEST["action"] !== "" && $_REQUEST["id"] !== "") {
+    $action = $_REQUEST["action"];
+    $id = $_REQUEST["id"];
 ?>
 <!doctype html>
 <html lang="en">
@@ -29,7 +31,7 @@ if (isset($_SESSION["uname"])) {
     <!-- fevicon -->
     <link rel="icon" href="../images/logo/logo.png" sizes="16x16">
 
-    <title>AIT | CE & IT PORTAL-ADMIN | Faculty</title>
+    <title>AIT | CE & IT PORTAL-ADMIN | Gallary</title>
 </head>
 
 <body>
@@ -54,9 +56,9 @@ if (isset($_SESSION["uname"])) {
 
     <?php if (isset($_REQUEST['id'])) {
 
-        $selectfacquery = "SELECT `id`, `faculty_id`, `name`, `image_path`, `designation`, `experience`, `qualification`, `expertise`, `email` FROM `faculty` WHERE id=".$_REQUEST["id"];
-        $selectfacqueryResult = $connection->query($selectfacquery);
-        $selectfaculty = $selectfacqueryResult->fetch();
+        $selectgallaryquery = "SELECT `id`, `image_path`, `title`, `details`, `date` FROM `$action` WHERE id=".$id;
+        $selectgallaryqueryResult = $connection->query($selectgallaryquery);
+        $selectgallary = $selectgallaryqueryResult->fetch();
 
     ?>
     
@@ -65,12 +67,12 @@ if (isset($_SESSION["uname"])) {
         <div class="card-header">
                 <div class="row">
                     <div class="col-1">
-                        <a href="faculty.php">
+                        <a href="gallary.php">
                             <h5 class="text-center"><i class="fa fa-arrow-left"></i></h5>
                         </a>
                     </div>
                     <div class="col-11">
-                        <h5 class="text-center heading-tile">Edit Faculty</h5>
+                        <h5 class="text-center heading-tile">Edit <?php echo $action; ?></h5>
                     </div>
                     
                 </div>
@@ -86,42 +88,27 @@ if (isset($_SESSION["uname"])) {
                 unset($_SESSION["error"]);
             } ?>
             <div class="alert alert-danger text-center" role="alert" id="edit_error">
-            </div>    
-            <!-- add_faculty_form -->
-            <form id="fc_add_form" onsubmit="return edit_faculty()" action="edit_faculty.php?id=<?php echo $_REQUEST["id"]; ?>" method="post" enctype="multipart/form-data">
-                <div class="form-group">
-                    <label for="fcid">ID</label>
-                    <input type="text" class="form-control" id="fcid" name="fcid" placeholder="Enter ID No." value="<?php echo $selectfaculty["id"]; ?>">
+                        </div> 
+                        <!-- add_subject_form -->
+                        <form id="sub_add_form" onsubmit="return edit_gallary()" action="edit_gallary.php?action=<?php echo $action; ?>&id=<?php echo $id; ?>" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="galtitle">Image</label>
+                                <small><?php echo $selectgallary["image_path"] ?></small>
+                                <input class="form-control" type="file" name="customFile" id="customFile">
+                                <small id="fileHelp" class="form-text text-muted mx-3 mt-3">File must be in *jpg, *jpeg or *png formate or less then 2MB</small>
+                    
+                                <label for="galtitle">Title</label>
+                                <input type="text" class="form-control" id="galtitle" name="galtitle" placeholder="Enter Title" value="<?php echo $selectgallary["title"]; ?>">
+                                
+                                <label for="galdetail">Details</label>
+                                <textarea class="form-control" type="text" name="galdetail" id="galdetail" rows="10" placeholder="Enter Details"><?php echo $selectgallary["details"]; ?></textarea>
 
-                    <label for="fcimage">Image</label>
-                    <small><?php echo $selectfaculty["image_path"]; ?></small>
-                    <input class="form-control" type="file" name="fcimage" id="fcimage" <?php echo $selectfaculty["image_path"]; ?>>
+                                <label for="galdate">Date</label>
+                                <input class="form-control" type="date" name="galdate" id="galdate" placeholder="Select Date" value="<?php echo $selectgallary["date"]; ?>">
 
-                    <label for="fcname">Name</label>
-                    <input type="text" class="form-control" id="fcname" name="fcname" placeholder="Enter Name" value="<?php echo $selectfaculty["name"]; ?>">
-                    <small id="namelHelp" class="form-text text-muted"> Add dr. or prof. before name</small>
-                    
-                    <label for="fcid">Designation</label>
-                    <input type="text" class="form-control" id="fcdesignation" name="fcdesignation" placeholder="Enter Designation" value="<?php echo $selectfaculty["designation"]; ?>">
-                    <small id="degHelp" class="form-text text-muted"> If more then one then saperate by qoma(,)</small>
-                    
-                    <label for="fcid">Experience</label>
-                    <input type="text" class="form-control" id="fcexperiance" name="fcexperiance" placeholder="Enter Experience" value="<?php echo $selectfaculty["experience"]; ?>">
-                    
-                    <label for="fcid">Qualification</label>
-                    <textarea type="text" class="form-control" id="fcqualification" name="fcqualification" placeholder="Enter Qualification"><?php echo $selectfaculty["qualification"]; ?></textarea>
-                    <small id="degHelp" class="form-text text-muted"> If more then one then saperate by qoma(,)</small>
-                    
-                    <label for="fcid">Expertise</label>
-                    <textarea type="text" class="form-control" id="fcexpertise" name="fcexpertise" placeholder="Enter Expertise"><?php echo $selectfaculty["expertise"]; ?></textarea>
-                    <small id="degHelp" class="form-text text-muted"> If more then one then saperate by qoma(,)</small>
-                    
-                    <label for="fcid">Email</label>
-                    <input type="text" class="form-control" id="fcemail" name="fcemail" placeholder="Enter Email" value="<?php echo $selectfaculty["email"]; ?>">
-
-                </div>
-                <button type="submit" class="btn btn-primary btn-lg btn-block" id="add_fc_btn">UPDATE</button>
-            </form>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg btn-block" id="add_fc_btn" style="text-transform: uppercase;">UPDATE <?php echo $action; ?></button>
+                        </form>
 
             </div>
         </div>
@@ -135,7 +122,7 @@ if (isset($_SESSION["uname"])) {
     
     <!-- Optional JavaScript -->
     <script src="../js/script.js"></script>
-    <script src="../js/faculty_validation.js"></script>
+    <script src="../js/gallary_validation.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
